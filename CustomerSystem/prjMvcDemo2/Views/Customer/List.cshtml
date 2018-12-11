@@ -1,0 +1,40 @@
+﻿@model IEnumerable<tCustomer>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>客戶資料一覽表</h2>
+<a href="~/Customer/New" class="btn btn-danger">新增客戶資料</a>
+<table class="table table-striped">
+    <tr>
+        <td>序</td>
+        <td>編號</td>
+        <td>姓名</td>
+        <td>電話</td>
+        <td>郵件</td>
+        <td>地址</td>
+        <td>修改</td>
+        <td>刪除</td>
+    </tr>
+    @{
+        int count = 0;
+        foreach (tCustomer t in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@t.fId.ToString()</td>
+                <td>@t.fName</td>
+                <td>@t.fPhone</td>
+                <td>@t.fEmail</td>
+                <td>@t.fAddress</td>
+                <td>@Html.ActionLink("修改", "Update", "Customer", new { qq = t.fId }, null)</td>
+                <td>@Html.ActionLink("刪除", "Delete", "Customer", new { qq = t.fId }, new { OnClick = "return confirm('確定要刪除嗎?')" })</td>
+            </tr>
+        }
+
+    }
+</table>
+
+

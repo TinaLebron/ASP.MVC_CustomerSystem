@@ -1,0 +1,14 @@
+﻿@model prjMvcDemo2.tCustomer
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="~/Customer/Update">
+    <h2>修改資料</h2>
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" value="送出" class="btn btn-primary"/>
+</form>
+
+

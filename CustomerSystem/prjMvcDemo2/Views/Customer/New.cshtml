@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>新增客戶資料</h2>
+
+<form method="post" action="~/Customer/New">
+    <div class="form-group">
+        <label for="fName">客戶姓名</label>
+        <input name="fName" class="form-control" type="text" >
+    </div>
+    <div class="form-group">
+        <label for="fPhone">電話</label>
+        <input name="fPhone" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="fEmail">電子郵件</label>
+        <input name="fEmail" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="fAddress">地址</label>
+        <input name="fAddress" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

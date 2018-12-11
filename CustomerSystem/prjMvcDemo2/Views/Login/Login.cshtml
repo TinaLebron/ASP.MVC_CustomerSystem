@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<form class="form-signin" method="post" action="~/Customer/List">
+    <div align="center" style="background-color :#456987;border-style:groove; border-radius:100px; padding:40px; margin:100px;">
+
+        <img src="~/Images/Untitled1.png" /> <br />
+        <div class="form-label-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="exampleDropdownFormPassword2">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+</form>
+
